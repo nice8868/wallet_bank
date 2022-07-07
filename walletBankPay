@@ -994,21 +994,13 @@ class WalletPayServices
     public function msgType($msgType = 2000){
         $this->msgType = $msgType;
         $arr=[
-            '2001'=>'gnete.wallbc.WallbcOpenapi102TransRpcService.openAcct',//开户C端
-            '2002'=>'gnete.wallbc.WallbcOpenapi102TransRpcService.activeAcct',//激活账户
-            '2020'=>'gnete.wallbc.WallbcOpenapi102TransRpcService.sendSmsAuthCode',//发送短信验证码
-            '2021'=>'gnete.wallbc.WallbcOpenapi102TransRpcService.validSmsAuthCode',//验证短信验证码
-            '2017'=>'gnete.wallbc.WallbcOpenapi102TransRpcService.lockUnlockAcct',//锁定/解锁账户
-            '2018'=>'gnete.wallbc.WallbcOpenapi102TransRpcService.freezeUnfreezeAcctBal',//冻结/解冻账户金额
-            '2016'=>'gnete.wallbc.WallbcOpenapi102TransRpcService.modifyPwd',//修改密码用于修改 B 端或者 C 端电子账户的支付密码
-            '2045'=>'gnete.wallbc.WallbcOpenapi102TransRpcService.resetBtypeAcctPwd',//重置支付密码(B 端)
-            '2066'=>'gnete.wallbc.WallbcOpenapi102TransRpcService.acctCancel',//注销(C 端)
-            '1004'=>'gnete.wallbc.WallbcOpenapi102QueryRpcService.queryAcctBal',//查询账户余额
-            '1002'=>'gnete.wallbc.WallbcOpenapi102QueryRpcService.queryAcctInfo',//查询账户信息
-            '1003'=>'gnete.wallbc.WallbcOpenapi102QueryRpcService.queryAcctRelatedInfo',//查询账户关联信息
-            '1005'=>'gnete.wallbc.WallbcOpenapi102QueryRpcService.queryTransResult',//查询交易结果
-            '1010'=>'gnete.wallbc.WallbcOpenapi102QueryRpcService.queryBatchTransResult',//查询批量交易结果
-            '1006'=>'gnete.wallbc.WallbcOpenapi102QueryRpcService.queryTransList',//查询交易明细
+            '2001'=>'gnete.wallbc.123.openAcct',//开户C端
+            '2002'=>'gnete.wallbc.123.activeAcct',//激活账户
+            '2020'=>'gnete.wallbc.123.sendSmsAuthCode',//发送短信验证码
+            '2021'=>'gnete.wallbc.123.validSmsAuthCode',//验证短信验证码
+            '2017'=>'gnete.wallbc.123.lockUnlockAcct',//锁定/解锁账户
+            '2018'=>'gnete.wallbc.123.freezeUnfreezeAcctBal',//冻结/解冻账户金额
+
         ];
         $this->method($arr[$this->msgType]);
         //$this->method = $arr[$this->msgType];
