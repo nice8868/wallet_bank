@@ -66,7 +66,7 @@ class SplitMoneyServices
          * @param StoreOrderDao $StoreOrderDao
          */
         $this->StoreOrderDao      = app()->make(StoreOrderDao::class);
-        /**
+       
     }
     //防止使用clone克隆对象
     private function __clone(){}
