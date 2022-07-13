@@ -53,7 +53,7 @@ class WalletPayServices
         $str = self::getString($data, $isUrlEncode);
         //使用SSL
         $certs = array();
-        $pfxPath = __DIR__.'/wallet/gnete_wg.pfx';
+        $pfxPath = __DIR__.'/wallet/gnete.pfx';
         $pfxPwd = '123456';
         openssl_pkcs12_read(file_get_contents($pfxPath), $certs, $pfxPwd);
         if(!$certs) return ;
@@ -86,7 +86,7 @@ class WalletPayServices
     public static function getCerSign($creStr){
         //使用SSL
         $certs = array();
-        $pfxPath = __DIR__.'/wallet/49c4ca5f189c4302a65280fb73400933.p12';
+        $pfxPath = __DIR__.'/wallet/49c4ca5f189c433400933.p12';
         $pfxPwd = '123456';
         openssl_pkcs12_read(file_get_contents($pfxPath), $certs, $pfxPwd);
         if(!$certs) return ;
